@@ -2,15 +2,15 @@
 /**
  * Pagination layout.
  *
- * @package understrap
+ * @package dws
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'understrap_pagination' ) ) {
+if ( ! function_exists( 'dws_pagination' ) ) {
 
-	function understrap_pagination( $args = array(), $class = 'pagination' ) {
+	function dws_pagination( $args = array(), $class = 'pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
@@ -21,9 +21,9 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'understrap' ),
-				'next_text'          => __( '&raquo;', 'understrap' ),
-				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
+				'prev_text'          => __( '&laquo;', 'dws' ),
+				'next_text'          => __( '&raquo;', 'dws' ),
+				'screen_reader_text' => __( 'Posts navigation', 'dws' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)

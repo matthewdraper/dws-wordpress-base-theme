@@ -2,13 +2,13 @@
 /**
  * Static hero sidebar setup.
  *
- * @package understrap
+ * @package dws
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'dws_container_type' );
 ?>
 
 <?php if ( is_active_sidebar( 'statichero' ) ) : ?>

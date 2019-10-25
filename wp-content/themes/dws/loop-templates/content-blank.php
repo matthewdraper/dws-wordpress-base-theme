@@ -2,7 +2,7 @@
 /**
  * Blank content partial template.
  *
- * @package understrap
+ * @package dws
  */
 
 // Exit if accessed directly.

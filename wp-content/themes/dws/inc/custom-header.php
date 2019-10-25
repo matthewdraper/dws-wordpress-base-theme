@@ -2,21 +2,21 @@
 /**
  * Custom header setup.
  *
- * @package understrap
+ * @package dws
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
+add_action( 'after_setup_theme', 'dws_custom_header_setup' );
 
-if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
-	function understrap_custom_header_setup() {
+if ( ! function_exists( 'dws_custom_header_setup' ) ) {
+	function dws_custom_header_setup() {
 
 		/**
-		 * Filter UnderStrap custom-header support arguments.
+		 * Filter DWS custom-header support arguments.
 		 *
-		 * @since UnderStrap 0.5.2
+		 * @since DWS 0.5.2
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.
@@ -33,7 +33,7 @@ if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
 		add_theme_support(
 			'custom-header',
 			apply_filters(
-				'understrap_custom_header_args',
+				'dws_custom_header_args',
 				array(
 					'default-image' => get_parent_theme_file_uri( '/img/header.jpg' ),
 					'width'         => 2000,
@@ -48,7 +48,7 @@ if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
 				'default-image' => array(
 					'url'           => '%s/img/header.jpg',
 					'thumbnail_url' => '%s/img/header.jpg',
-					'description'   => __( 'Default Header Image', 'understrap' ),
+					'description'   => __( 'Default Header Image', 'dws' ),
 				),
 			)
 		);
