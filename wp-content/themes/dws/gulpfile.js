@@ -151,6 +151,7 @@ gulp.task('scripts', function() {
 		`${paths.dev}/js/bootstrap4/bootstrap.bundle.js`,
 
 		// End - All BS4 stuff
+		`${paths.dev}/js/fontawesome/all.js`,
 
 		`${paths.dev}/js/skip-link-focus-fix.js`,
 
