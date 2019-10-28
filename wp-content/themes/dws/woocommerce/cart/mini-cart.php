@@ -28,7 +28,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 
 	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
-			do_action( 'woocommerce_before_mini_cart_contents' );
+		do_action( 'woocommerce_before_mini_cart_contents' );
 
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 			$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
@@ -44,30 +44,30 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					<?php
 					echo apply_filters(
 						'woocommerce_cart_item_remove_link', sprintf(
-							'<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">&times;</a>',
-							esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-							__( 'Remove this item', 'dws' ),
-							esc_attr( $product_id ),
-							esc_attr( $cart_item_key ),
-							esc_attr( $_product->get_sku() )
-						), $cart_item_key
+						'<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">&times;</a>',
+						esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+						__( 'Remove this item', 'dws' ),
+						esc_attr( $product_id ),
+						esc_attr( $cart_item_key ),
+						esc_attr( $_product->get_sku() )
+					), $cart_item_key
 					);
 					?>
 					<?php if ( empty( $product_permalink ) ) : ?>
+						<?php echo $thumbnail . $product_name; ?>
+					<?php else : ?>
+						<a href="<?php echo esc_url( $product_permalink ); ?>">
 							<?php echo $thumbnail . $product_name; ?>
-						<?php else : ?>
-							<a href="<?php echo esc_url( $product_permalink ); ?>">
-								<?php echo $thumbnail . $product_name; ?>
-							</a>
-						<?php endif; ?>
-						<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
-						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
-					</li>
-					<?php
+						</a>
+					<?php endif; ?>
+					<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
+					<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+				</li>
+				<?php
 			}
 		}
 
-			do_action( 'woocommerce_mini_cart_contents' );
+		do_action( 'woocommerce_mini_cart_contents' );
 		?>
 	</ul>
 
