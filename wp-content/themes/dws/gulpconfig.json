@@ -1,7 +1,9 @@
 {
 	"browserSyncOptions": {
-		"proxy": "localhost:8080/",
-		"notify": false
+		"notify": false,
+		"open": "external",
+		"host": "dws-theme.local",
+		"proxy": "dws-theme.local"
 	},
 	"browserSyncWatchFiles": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"],
 	"paths": {

@@ -136,10 +136,10 @@ if ( ! function_exists( 'dws_widgets_init' ) ) {
 				'name'          => __( 'Hero Canvas', 'dws' ),
 				'id'            => 'herocanvas',
 				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'dws' ),
-				'before_widget' => '',
-				'after_widget'  => '',
-				'before_title'  => '',
-				'after_title'   => '',
+				'before_widget' => '<div class="hero">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="hero__title">',
+				'after_title'   => '</h2>',
 			)
 		);
 
